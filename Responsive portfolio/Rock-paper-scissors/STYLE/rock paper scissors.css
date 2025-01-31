@@ -1,0 +1,48 @@
+.rps{
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  }
+  body{
+    background-color: black;
+    color: white;
+  }
+  .ro{
+    height: 50px;
+    
+    
+    border: none;}
+  .pe{
+    height: 50px;
+  }
+  .sc{
+    height: 50px;
+  }
+  .spr,.spr-p,.spr-s{
+    background-color: transparent;
+    border: 1px solid white;
+    width: 120px;
+    height: 120;
+    border-radius: 60px;
+    padding: 15px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  .re{
+  margin-top: 50px;
+  font-size: 25px;
+  font-weight: bold;
+  }
+  .scr{
+    margin-top: 50px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .res,.auto{
+    background-color: white;
+    font-size: 15px;
+    border: none;
+    padding: 8px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  }

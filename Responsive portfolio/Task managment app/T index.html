@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.3/dragula.min.css">
+    <link rel="stylesheet" href="T styles.css">
+</head>
+<body>
+    <div class="app">
+        <header>
+            <h1>Task Manager</h1>
+        </header>
+
+        <!-- Task Form -->
+        <form id="taskForm">
+            <h2 class="form-title">Create New Task</h2>
+            <div class="form-container">
+                <div class="form-group">
+                    <label for="taskInput">Task Title</label>
+                    <input type="text" id="taskInput" placeholder="Enter task title..." required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="taskTags">Tags</label>
+                    <input type="text" id="taskTags" placeholder="Enter tags (comma separated)">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="taskPriority">Priority</label>
+                        <select id="taskPriority" required>
+                            <option value="medium">Medium Priority</option>
+                            <option value="high">High Priority</option>
+                            <option value="low">Low Priority</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="startDate">Start Date</label>
+                        <input type="text" id="startDate" placeholder="Select start date" class="datepicker">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dueDate">Due Date</label>
+                        <input type="text" id="dueDate" placeholder="Select due date" class="datepicker">
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    <span class="btn-icon">+</span>
+                    Add Task
+                </button>
+            </div>
+        </form>
+
+        <!-- Task Boards -->
+        <div class="board-container">
+            <div class="board-column" id="todo">
+                <h2>To Do</h2>
+                <div class="task-list"></div>
+            </div>
+            <div class="board-column" id="inProgress">
+                <h2>In Progress</h2>
+                <div class="task-list"></div>
+            </div>
+            <div class="board-column" id="done">
+                <h2>Done</h2>
+                <div class="task-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div id="notification" class="notification"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.3/dragula.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="T script.js"></script>
+</body>
+</html>

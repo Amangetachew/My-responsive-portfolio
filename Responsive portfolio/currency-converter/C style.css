@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #00416A, #E4E5E6);
+    padding: 20px;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 450px;
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    text-align: center;
+    color: #1a237e;
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.converter-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+.amount-container, .currency-selectors {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.currency-selectors {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.from-currency, .to-currency {
+    flex: 1;
+    min-width: 150px;
+}
+
+label {
+    font-weight: 600;
+    color: #34495e;
+    font-size: 0.95rem;
+    margin-bottom: 0.3rem;
+}
+
+input, select {
+    padding: 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: white;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+input:focus, select:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+button {
+    padding: 1rem 1.5rem;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+button:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+#swap-btn {
+    padding: 0.8rem;
+    background: #2ecc71;
+    margin: 0 10px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#swap-btn:hover {
+    background: #27ae60;
+}
+
+.result {
+    text-align: center;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border: 2px solid #e0e0e0;
+}
+
+.result p {
+    color: #666;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.result h2 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+@media (max-width: 480px) {
+    .currency-selectors {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    #swap-btn {
+        margin: 1rem auto;
+    }
+}
+
+.select-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.currency-search {
+    margin-bottom: 0.5rem;
+    padding: 0.8rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    width: 100%;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+.currency-search:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+select {
+    width: 100%;
+    max-height: 200px;
+}
+
+/* Add styles for filtered options */
+select option {
+    padding: 8px;
+}
+
+select option:checked {
+    background: #3498db linear-gradient(0deg, #3498db 0%, #3498db 100%);
+    color: white;
+} 
